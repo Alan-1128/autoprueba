@@ -1,0 +1,42 @@
+
+<div class="containe animate__animated animate__fadeIn">
+      <div class="formulario">
+          <form class="form" autocomplete="off" [formGroup]="miFormulario" (ngSubmit)="guardar()">
+              <div class="inputs whit">
+                  <label class="non" for="auto">Auto</label>
+                  <label class="text-dangerr" 
+                         *ngIf="validacion('auto')">
+                        No puede estar vacio</label>
+                  <input type="text" formControlName="auto" name="auto">
+              </div>
+              <div class="inputs whit">
+                  <label class="non" for="anio">Año</label>
+                  <span class="text-dangerr" 
+                        *ngIf="validacion('anio')">
+                        Debe de ser mayor de 3 caracteres</span>
+                  <input type="text" formControlName="anio" name="anio">
+              </div>
+              <div class="inputs whit">
+                <label class="non" for="marca">Marca</label>
+                <label class="text-dangerr" 
+                       *ngIf="validacion('marca')">
+                       No puede estar vacio</label>
+                <input type="text" formControlName="marca" name="marca">
+            </div>
+            <div class="inputs whit">
+                <label class="non" for="modelo">Modelo</label>
+                <span class="text-dangerr" 
+                      *ngIf="validacion('modelo')">
+                      No puede estar vacio</span>
+                <input type="text" formControlName="modelo" name="modelo">
+            </div>
+                  <button pButton 
+                          type="submit"
+                          label="Añadir" 
+                          style="width: 24rem;"
+                          class="p-button-outlined"></button>
+          </form>
+      </div>
+  </div>
+
+ 

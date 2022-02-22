@@ -1,0 +1,28 @@
+
+<p-sidebar [(visible)]="visibleSidebar2" position="right" [baseZIndex]="10000">
+    <br>
+    <button pButton 
+            type="button" 
+            label="Inicio" 
+            icon="pi pi-file" 
+            class="p-button-outlined"
+            style="width: 10rem;"
+            routerLink="/"></button>
+    <br>
+    <br>
+    <button pButton 
+            type="button" 
+            label="Agregar" 
+            icon="pi pi-plus" 
+            class="p-button-outlined"
+            style="width: 10rem;"
+            routerLink="/add/form"></button>
+</p-sidebar>
+
+    <div class="top-menu" 
+         (click)="visibleSidebar2 = true">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+    </div>
+    
